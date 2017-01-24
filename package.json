@@ -1,0 +1,24 @@
+{
+  "name": "parallax-on-the-web-devtips",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Video Series [ for free on YouTube](https://www.youtube.com/playlist?list=PLqGj3iMvMa4IyCbhul-PdeiDqmh4ooJzk) on the [DevTips](https://www.youtube.com/user/DevTipsForDesigners) Channel",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevTips/Parallax-on-the-Web-DevTips-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevTips/Parallax-on-the-Web-DevTips-/issues"
+  },
+  "homepage": "https://github.com/DevTips/Parallax-on-the-Web-DevTips-#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "parsleyjs": "^2.6.2"
+  }
+}

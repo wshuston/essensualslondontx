@@ -1,0 +1,466 @@
+// Base Styles
+
+body
+  font-family: "Open Sans", sans-serif
+
+h1
+  color: #ccc
+  weight: 300
+
+h3
+  margin: 30px 0
+
+figure
+  margin: auto
+
+.content
+  position: relative
+  background: white
+  margin-bottom: 400px
+  overflow: hidden
+
+  article
+    padding: 50px 0 0 0
+    max-width: 640px
+    margin: 0 auto
+    text-align: center
+    position: relative
+    &.services,
+    &.about,
+    &.wedding-styling-content
+      text-align: left
+    &.promo
+      padding: 50px 0 50px 0
+
+img
+  max-width: 100%
+
+li
+  margin-bottom: 0
+  list-style: none
+
+
+// Parallax
+
+.top-box
+  position: relative
+  height: 768px
+  background:
+    image: url(/images/leads/home.jpg)
+    size: auto
+    position: center
+    attachment: fixed
+  overflow: hidden
+
+.services-box
+  @extend .top-box
+  background:
+    image: url(/images/leads/services.jpg)
+
+.products-box
+  @extend .top-box
+  background:
+    image: url(/images/leads/products.jpg)
+
+.about-box
+  @extend .top-box
+  background:
+    image: url(/images/leads/about.jpg)
+
+.logo
+  height: 100px
+  width: 100%
+  background: none
+  position: absolute
+  top: 50%
+  margin-top: -50px
+  text-align: center
+  h1
+    color: #fff
+    line-height: 1.2em
+    letter-spacing: 3px
+    font-weight: 100
+    font-style: normal
+    &::after
+      content: ''
+      display: block
+      font-weight: normal
+      background-color: #fff
+      margin: 0.25em auto
+      width: .75em
+      height: 4px
+  .description
+    max-width: 70%
+    margin: 0 auto
+    p
+      color: #fff
+      font-weight: bold
+
+.logo-img1,
+.logo-img2
+  width: 85%
+
+.logo-img1
+  position: absolute
+  opacity: 0
+
+// .back-bird 
+//   width: 960px
+//   height: 298px
+//   background:
+//     image: url(/images/back-bird.png)
+//     repeat: no-repeat
+//     position: top left
+//   position: absolute
+//   left: 50%
+//   margin-left: -480px
+
+// .bird-box
+//   position: relative
+//   height: 600px
+//   background:
+//     image: url(../images/bird-bg.jpg)
+//     size: auto 600px
+//     position: top center
+//     attachment: fixed
+//   overflow: hidden
+
+// .logo
+//   height: 100px
+//   width: 100%
+//   background:
+//     image: url(../images/black-bird-logo.svg)
+//     position: center
+//     repeat: no-repeat
+//   position: absolute
+//   top: 50%
+//   margin-top: -50px
+
+// .fore-bird
+//   width: 960px
+//   height: 733px
+//   background:
+//     image: url(../images/fore-bird.png)
+//     repeat: no-repeat
+//     position: right bottom
+//   position: absolute
+//   left: 50%
+//   margin-left: -480px
+//   top: 380px
+
+// .back-bird
+//   width: 960px
+//   height: 298px
+//   background:
+//     image: url(../images/back-bird.png)
+//     repeat: no-repeat
+//     position: top left
+//   position: absolute
+//   left: 50%
+//   margin-left: -480px
+
+
+
+// Model Grid
+
+.our-team
+  padding: 0 20px
+  figure
+    margin-bottom: 20px
+    position: relative
+    opacity: 0
+    transform: translateX(-20px)
+    transition: all 0.3s ease-in-out
+    overflow: hidden
+
+
+    &.is-showing
+      opacity: 1
+      transform: translateX(0px)
+    
+    img
+      display: block
+      transform: scale(1)
+      transition: all 0.3s ease-in-out
+
+    &:hover
+      figcaption
+        left: 0%
+      img
+        transform: scale(1.1)
+
+  figcaption
+    position: absolute
+    bottom: 10px
+    left: -100%
+    background: black
+    color: white
+    padding: 2px 8px
+    font-size: 16px
+    transition: all 0.3s ease-in-out
+
+// .clothes-pics
+//   margin-bottom: 100px
+
+//   figure
+//     margin-bottom: 20px
+//     position: relative
+//     opacity: 0
+//     transform: translateX(30px)
+//     transition: all 0.4s ease-in-out
+//     overflow: hidden
+//     cursor: pointer
+
+//     &.is-showing
+//       opacity: 1
+//       transform: translateX(0px)
+
+//     img
+//       display: block
+//       transform: scale(1)
+//       transition: all 0.3s ease-in-out
+
+//     &:hover
+//       figcaption
+//         left: 0%
+
+//       img
+//         transform: scale(1.1)
+
+//   figcaption
+//     position: absolute
+//     bottom: 10px
+//     left: -100%
+//     background: black
+//     color: white
+//     padding: 2px 8px
+//     font-size: 11px
+//     transition: all 0.3s ease-in-out
+
+
+
+// large-window
+.large-window
+  height: 640px
+  background:
+    image: url(/images/leads/weddingstyle.jpg)
+    position: center 0px
+    repeat: repeat-y
+    attachment: fixed
+    size: cover
+  margin-top: 100px
+  margin-bottom: 100px
+  border-radius: 50%
+  position: relative
+
+.window-tint
+  background-color: rgba(0,0,0,0.5)
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  border-radius: 50%
+  display: flex
+  justify-content: center
+  align-items: center
+
+.promo-text
+  color: white
+  font-weight: 100
+  font-size: 50px
+  line-height: 1.2
+  strong
+    display: block
+    font-size: 30px
+    span
+      font:
+        weight: 300
+        size: 18px
+        style: italic
+      color: rgba(255,255,255,0.6)
+  .window-cta
+    font-size: 20px
+    text-decoration: none
+    color: white
+    border: 1px solid white
+    padding: 10px 20px
+    transition: all 0.3s ease-in-out
+    cursor: pointer
+    &:hover
+      background: white
+      color: black
+  p 
+    font:
+      size: 20px
+
+// .large-window
+//   height: 640px
+//   background:
+//     image: url(../images/model2.jpg)
+//     position: center 0px
+//     repeat: repeat-y
+//     attachment: fixed
+//   margin-top: 100px
+//   margin-bottom: 100px
+//   border-radius: 50%
+//   position: relative
+
+//   .window-tint
+//     background-color: rgba(0,0,0,0.5)
+//     position: absolute
+//     top: 0
+//     left: 0
+//     right: 0
+//     bottom: 0
+//     border-radius: 50%
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     opacity: 0
+
+
+//   .promo-text
+//     color: white
+//     font-weight: 100
+//     font-size: 50px
+//     line-height: 1.2
+
+//     strong
+//       display: block
+//       font-size: 30px
+
+//     span
+//       font:
+//         weight: 300
+//         size: 18px
+//         style: italic
+//       color: rgba(255,255,255,0.6)
+
+//     .window-cta
+//       font-size: 20px
+//       text-decoration: none
+//       color: white
+//       border: 1px solid white
+//       padding: 10px 20px
+//       transition: all 0.3s ease-in-out
+
+//       &:hover
+//         background: white
+//         color: black
+
+
+// posts
+
+.blog-posts
+  // margin-top: 100px
+  .post
+    border: 1px solid #e1e1e1
+    padding: 20px 20px 0
+    background: white
+    position: relative
+
+  .post-1
+    transform: translate(100px, 20px)
+  .post-2
+    z-index: 11
+  .post-3
+    transform: translate(-100px, 20px)
+
+// .blog-posts
+//   margin-top: 100px
+
+//   .post
+//     border: 1px solid #e1e1e1
+//     padding: 20px 20px 0
+//     background: white
+//     position: relative
+
+//   .post-1
+//     transform: translate(100px, 20px)
+
+//   .post-2
+//     z-index: 2
+
+//   .post-3
+//     transform: translate(-100px, 20px)
+
+
+//footer
+
+footer
+  background: black
+  color: white
+  padding: 40px 0
+  position: fixed
+  bottom: 0
+  width: 100%
+  z-index: -1
+
+  .footer-stuff
+    max-width: 640px
+    margin: 0 auto
+
+  a
+    color: white
+
+  input
+    color: #666
+
+// footer
+//   background: black
+//   color: white
+//   padding: 40px 0
+//   position: fixed
+//   bottom: 0
+//   width: 100%
+//   z-index: -1
+
+//   .footer-stuff
+//     max-width: 640px
+//     margin: 0 auto
+
+//   a
+//     color: white
+
+//   input
+//     color: #666
+
+// WEDDING STYLE
+
+.wedding-styling
+  position: relative
+
+.back-home
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 11
+  max-width: 64px
+  a
+    text-decoration: none
+  img
+    width: auto
+    opacity: 0.5
+  p
+    text-decoration: none
+    color: #666
+    line-height: 0
+    text-align: center
+
+
+form.contact-form
+  input
+    border: 1px solid #666
+    width: 48.5%
+    &#firstname
+      margin-right: 1.25%
+    &#lastname
+      margin-left: 1.25%
+    &#email,
+    &#subject
+      width: 100%
+  textarea
+    border: 1px solid #666
+    width: 100%
+    height: 100px
