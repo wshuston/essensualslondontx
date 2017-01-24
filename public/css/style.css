@@ -895,20 +895,20 @@ li {
 .top-box, .services-box, .products-box, .about-box {
   position: relative;
   height: 768px;
-  background-image: url(/images/leads/home.jpg);
+  background-image: url(../images/leads/home.jpg);
   background-size: auto;
   background-position: center;
   background-attachment: fixed;
   overflow: hidden; }
 
 .services-box {
-  background-image: url(/images/leads/services.jpg); }
+  background-image: url(../images/leads/services.jpg); }
 
 .products-box {
-  background-image: url(/images/leads/products.jpg); }
+  background-image: url(../images/leads/products.jpg); }
 
 .about-box {
-  background-image: url(/images/leads/about.jpg); }
+  background-image: url(../images/leads/about.jpg); }
 
 .logo {
   height: 100px;
@@ -979,7 +979,7 @@ li {
 
 .large-window {
   height: 640px;
-  background-image: url(/images/leads/weddingstyle.jpg);
+  background-image: url(../images/leads/weddingstyle.jpg);
   background-position: center 0px;
   background-repeat: repeat-y;
   background-attachment: fixed;

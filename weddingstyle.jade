@@ -6,17 +6,17 @@ html(lang="en")
     meta(name="description", content="")
     meta(name="author", content="")
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    link(rel="stylesheet", href="css/style.css")
-    link(rel="icon", type="image/png", href="/images/favicon.ico")
+    link(rel="stylesheet", href="public/css/style.css")
+    link(rel="icon", type="image/png", href="public/images/favicon.ico")
   
   body
     .back-home
         a(href="/")
-            img(src="/images/arrow-back-128.png")
+            img(src="public/images/arrow-back-128.png")
             p home
     .wedding-styling
         img(
-            src="/images/leads/weddingstyle.jpg"
+            src="public/images/leads/weddingstyle.jpg"
             id="preload"
             style="display:none;"
         )
@@ -41,7 +41,7 @@ html(lang="en")
 
             p <em>Book with our makeup artist for special events and weddings</em>
 
-            img(src="/images/team/lorannschlinder-color.jpg")
+            img(src="public/images/team/lorannschlinder-color.jpg")
 
             hr
 
@@ -87,9 +87,9 @@ html(lang="en")
                     ) Submit
 
 
-    script(src="js/jquery-2.1.3.min.js")
+    script(src="public/js/jquery-2.1.3.min.js")
     //- script(src="js/functions.js")
-    script(src="js/parsley.min.js")
+    script(src="public/js/parsley.min.js")
 
     script.
         window.onload = function() {
