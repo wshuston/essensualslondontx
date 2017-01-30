@@ -5,6 +5,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i|Titillium+Web:200");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -856,15 +857,23 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
+* {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important; }
+
 body {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  max-width: 1170px;
+  margin: 0 auto; }
 
 h1 {
   color: #ccc;
-  weight: 300; }
+  weight: 300;
+  font-family: 'Titillium Web', 'Open Sans', sans-serif; }
 
 h3 {
-  margin: 30px 0; }
+  margin: 30px 0;
+  font-family: 'Titillium Web', 'Open Sans', sans-serif; }
 
 figure {
   margin: auto; }
@@ -892,12 +901,40 @@ li {
   margin-bottom: 0;
   list-style: none; }
 
+footer {
+  max-width: 1170px;
+  margin: 0 auto; }
+
+.main-nav {
+  position: fixed;
+  top: 0;
+  height: 48px;
+  width: 100%;
+  max-width: 1170px;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  z-index: 111; }
+  .main-nav ul {
+    list-style: none; }
+    .main-nav ul li {
+      display: inline-block;
+      padding: 8px 16px; }
+      .main-nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 100;
+        font-family: 'Titillium Web', 'Open Sans', sans-serif;
+        font-size: 20px;
+        text-transform: uppercase; }
+        .main-nav ul li a:hover, .main-nav ul li a:active {
+          text-decoration: underline; }
+
 .top-box, .services-box, .products-box, .about-box {
   position: relative;
   height: 768px;
   background-image: url(/images/leads/home.jpg);
   background-size: auto;
-  background-position: center;
+  background-position: top center;
   background-attachment: fixed;
   overflow: hidden; }
 
@@ -922,8 +959,9 @@ li {
     color: #fff;
     line-height: 1.2em;
     letter-spacing: 3px;
-    font-weight: 100;
-    font-style: normal; }
+    font-weight: bold;
+    font-style: normal;
+    text-shadow: 0 0 10px #666; }
     .logo h1::after {
       content: "";
       display: block;
@@ -937,7 +975,8 @@ li {
     margin: 0 auto; }
     .logo .description p {
       color: #fff;
-      font-weight: bold; }
+      font-weight: normal;
+      text-shadow: 0 0 10px #666; }
 
 .logo-img1,
 .logo-img2 {
@@ -983,7 +1022,7 @@ li {
   background-position: center 0px;
   background-repeat: repeat-y;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: 65%;
   margin-top: 100px;
   margin-bottom: 100px;
   border-radius: 50%;
@@ -1043,7 +1082,7 @@ li {
 footer {
   background: black;
   color: white;
-  padding: 40px 0;
+  padding: 40px 20px;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -1089,5 +1128,58 @@ form.contact-form textarea {
   border: 1px solid #666;
   width: 100%;
   height: 100px; }
+
+.wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
+.item {
+  -webkit-box-flex: 1 200px;
+  -moz-box-flex: 1 200px;
+  -webkit-flex: 1 200px;
+  -ms-flex: 1 200px;
+  flex: 1 200px;
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  -ms-flex-order: 2;
+  -webkit-order: 2;
+  order: 2; }
+
+@media screen and (max-width: 768px) {
+  .content article {
+    padding: 20px; }
+
+  .main-nav ul {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    overflow: scroll; }
+    .main-nav ul li {
+      -webkit-box-flex: 0 0 auto;
+      -moz-box-flex: 0 0 auto;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto; }
+
+  .large-window {
+    height: 50vh;
+    width: 50vh;
+    background-size: cover;
+    margin: 100px auto; }
+    .large-window .promo-text {
+      font-size: 40px; }
+
+  footer .footer-stuff .footer-social {
+    width: 30.6666666667%; }
+  footer .footer-stuff .footer-logo {
+    width: 65.3333333333%; } }
+@media screen and (max-width: 420px) {
+  .content .logo-img1 {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 var pContainerHeight = $('.top-box').height();
+var vph = $(window).height();
 
 $(window).scroll(function(){
 	var wScroll = $(this).scrollTop();
@@ -52,7 +53,7 @@ $(window).scroll(function(){
 	if(wScroll > $('.large-window').offset().top - ($(window).height())){
 		$('.large-window').css({'background-position':'center '+ (wScroll - $('.large-window').offset().top) +'px'});
 
-		var opacity = (wScroll - $('.large-window').offset().top + 400) / (wScroll / 5);
+		var opacity = (wScroll - $('.large-window').offset().top + 600) / (wScroll / 5);
 
 		$('.window-tint').css({'opacity': opacity});
 	}

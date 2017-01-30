@@ -1,0 +1,79 @@
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+// exmaples of flexbox use
+.wrapper {
+  @include flexbox();
+}
+
+.item {
+  @include flex(1 200px);
+  @include order(2);
+}
+// ^^^ examples of flexbox use
+
+// responsive
+
+@media screen and (max-width: 768px) {
+  .content {
+    article {
+      padding: 20px;
+    }
+  }
+  .main-nav {
+    ul {
+      @include flexbox();
+      overflow: scroll;
+      li {
+        @include flex(0 0 auto);
+      }
+    }
+  }  
+  .large-window {
+    height: 50vh;
+    width: 50vh;
+    background-size: cover;
+    margin: 100px auto;
+    .promo-text {
+        font-size: 40px;
+    }
+  }
+  footer {
+    .footer-stuff {
+      .footer-social {
+        width: 30.6666666667%;
+      }
+      .footer-logo {
+        width: 65.3333333333%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .content {
+    .logo-img1 {
+      display: none;
+    }
+  }
+}

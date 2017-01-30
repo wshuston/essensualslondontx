@@ -1,8 +1,10 @@
+@import mixins;
 // Base Styles
 
 body
   font-family: "Open Sans", sans-serif
-
+  max-width: 1170px
+  margin: 0 auto
 h1
   color: #ccc
   weight: 300
@@ -18,7 +20,6 @@ figure
   background: white
   margin-bottom: 400px
   overflow: hidden
-
   article
     padding: 50px 0 0 0
     max-width: 640px
@@ -39,6 +40,28 @@ li
   margin-bottom: 0
   list-style: none
 
+footer
+  max-width: 1170px
+  margin: 0 auto
+
+.main-nav
+  position: fixed
+  top: 0
+  height: 40px
+  width: 100%
+  max-width: 1170px
+  background-color: rgba(0,0,0,0.6)
+  text-align: center
+  z-index: 111
+  ul 
+    list-style: none
+    li
+      display: inline-block
+      padding: 8px 16px
+      a
+        text-decoration: none
+        color: white
+
 
 // Parallax
 
@@ -48,7 +71,7 @@ li
   background:
     image: url(/images/leads/home.jpg)
     size: auto
-    position: center
+    position: top center
     attachment: fixed
   overflow: hidden
 
@@ -104,62 +127,6 @@ li
   position: absolute
   opacity: 0
 
-// .back-bird 
-//   width: 960px
-//   height: 298px
-//   background:
-//     image: url(/images/back-bird.png)
-//     repeat: no-repeat
-//     position: top left
-//   position: absolute
-//   left: 50%
-//   margin-left: -480px
-
-// .bird-box
-//   position: relative
-//   height: 600px
-//   background:
-//     image: url(../images/bird-bg.jpg)
-//     size: auto 600px
-//     position: top center
-//     attachment: fixed
-//   overflow: hidden
-
-// .logo
-//   height: 100px
-//   width: 100%
-//   background:
-//     image: url(../images/black-bird-logo.svg)
-//     position: center
-//     repeat: no-repeat
-//   position: absolute
-//   top: 50%
-//   margin-top: -50px
-
-// .fore-bird
-//   width: 960px
-//   height: 733px
-//   background:
-//     image: url(../images/fore-bird.png)
-//     repeat: no-repeat
-//     position: right bottom
-//   position: absolute
-//   left: 50%
-//   margin-left: -480px
-//   top: 380px
-
-// .back-bird
-//   width: 960px
-//   height: 298px
-//   background:
-//     image: url(../images/back-bird.png)
-//     repeat: no-repeat
-//     position: top left
-//   position: absolute
-//   left: 50%
-//   margin-left: -480px
-
-
 
 // Model Grid
 
@@ -199,44 +166,6 @@ li
     font-size: 16px
     transition: all 0.3s ease-in-out
 
-// .clothes-pics
-//   margin-bottom: 100px
-
-//   figure
-//     margin-bottom: 20px
-//     position: relative
-//     opacity: 0
-//     transform: translateX(30px)
-//     transition: all 0.4s ease-in-out
-//     overflow: hidden
-//     cursor: pointer
-
-//     &.is-showing
-//       opacity: 1
-//       transform: translateX(0px)
-
-//     img
-//       display: block
-//       transform: scale(1)
-//       transition: all 0.3s ease-in-out
-
-//     &:hover
-//       figcaption
-//         left: 0%
-
-//       img
-//         transform: scale(1.1)
-
-//   figcaption
-//     position: absolute
-//     bottom: 10px
-//     left: -100%
-//     background: black
-//     color: white
-//     padding: 2px 8px
-//     font-size: 11px
-//     transition: all 0.3s ease-in-out
-
 
 
 // large-window
@@ -247,7 +176,7 @@ li
     position: center 0px
     repeat: repeat-y
     attachment: fixed
-    size: cover
+    size: 65%
   margin-top: 100px
   margin-bottom: 100px
   border-radius: 50%

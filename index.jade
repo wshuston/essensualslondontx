@@ -10,10 +10,20 @@ html(lang="en")
     link(rel="icon", type="image/png", href="/images/favicon.ico")
   
   body
+    
+    nav.main-nav#main-nav(style="display: none;")
+        ul
+            li: a(href="#top-box") Top
+            li: a(href="#our-team") Our Team
+            li: a(href="/weddingstyle") Wedding Styling
+            li: a(href="#services-box") Services
+            li: a(href="#products-box") Products
+            li: a(href="#about-box") About
+            li: a(href="#contact-form") Request an appointment
 
-    header.top-box
+    header.top-box#top-box
         .logo
-            h1 HOME
+            h1#top-logo(style="display: none;") HOME
 
     section.content
         article
@@ -37,7 +47,7 @@ html(lang="en")
 
             hr
 
-        .our-team
+        .our-team#our-team
             .row.img-row
                 figure.columns.four
                     img(src="/images/team/romanbercerra.jpg")
@@ -76,7 +86,7 @@ html(lang="en")
                     p Love is in the hair <br>
                     a(href="/weddingstyle").window-cta More Info
 
-        .services-box
+        .services-box#services-box
             .logo.services
                 h1 SERVICES
                 .description
@@ -140,7 +150,7 @@ html(lang="en")
             hr
 
 
-        .products-box
+        .products-box#products-box
             .logo.products
                 h1 PRODUCTS
                 .description
@@ -160,7 +170,7 @@ html(lang="en")
 
             hr
 
-        .about-box
+        .about-box#about-box
             .logo.about
                 h1 ABOUT
                 .description
@@ -222,29 +232,19 @@ html(lang="en")
     
     footer
         .row.footer-stuff
-            .columns.three
+            .columns.four.footer-social
                 strong FIND US ON
                 ul
-                    li: a(href="") Twitter
-                    li: a(href="") Facebook
-                    li: a(href="") Pinterest
-                    li: a(href="") Instagram
-
-            .columns.three
-                strong OTHER SHOPS
-                ul
-                    li: a(href="") Red Robin
-                    li: a(href="") Emerald Eagle
-                    li: a(href="") Crimson Cranw
-                    li: a(href="") Auburn Abbot
-            .columns.six
-                p <strong>Sign Up for the Newsletter</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam nobis perspiciatis dolorum sequi, odio aliquid, 
-
-                form.row
-                    .columns.eight
-                        input.u-full-width(type="email" placeholder="Your Email")
-                    .columns.four
-                        input.button-primary(type="submit")
+                    li: a(href="https://twitter.com/essensualstx") Twitter
+                    li: a(href="https://www.facebook.com/essensusalslondontx/") Facebook
+                    li: a(href="https://www.instagram.com/essensualslondontx/") Instagram
+            .columns.four.footer-logo
+                img(src="/images/logo10.png")
+            .columns.four
+                address
+                    | 7200 Bishop Rd, Ste D10
+                    | Plano, Texas
+                    | 972.312.9494
 
     script(src="js/jquery-2.1.3.min.js")
     script(src="js/functions.js")
@@ -252,5 +252,13 @@ html(lang="en")
 
     script.
         $('.contact-form').parsley();
+
+    script.
+        window.onload = function() {
+            $('#top-logo').fadeIn(1000);
+            setTimeout(function(){
+                $('#main-nav').fadeIn(1000);
+            }, 500);
+        }
 
 
