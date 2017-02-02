@@ -971,6 +971,9 @@ li {
   .logo .description {
     max-width: 70%;
     margin: 0 auto; }
+    @media screen and (min-width: 1024px) {
+      .logo .description {
+        max-width: 60%; } }
     .logo .description p {
       color: #fff;
       font-weight: normal;
