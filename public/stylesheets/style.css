@@ -864,7 +864,6 @@ there.
 
 body {
   font-family: "Open Sans", sans-serif;
-  max-width: 1170px;
   margin: 0 auto; }
 
 h1 {
@@ -902,10 +901,6 @@ li {
   margin-bottom: 0;
   list-style: none; }
 
-footer {
-  max-width: 1170px;
-  margin: 0 auto; }
-
 .main-nav {
   position: fixed;
   top: 0;
@@ -917,7 +912,8 @@ footer {
   text-align: center;
   z-index: 111; }
   .main-nav ul {
-    list-style: none; }
+    list-style: none;
+    overflow: hidden; }
     .main-nav ul li {
       display: inline-block;
       padding: 8px 16px; }
@@ -989,7 +985,10 @@ footer {
   opacity: 0; }
 
 .our-team {
-  padding: 0 20px; }
+  padding: 0 20px;
+  width: auto;
+  max-width: 1170px;
+  margin: 0 auto; }
   .our-team figure {
     margin-bottom: 20px;
     position: relative;
@@ -1228,16 +1227,6 @@ form.contact-form textarea {
   -webkit-order: 2;
   order: 2; }
 
-@media screen and (max-width: 1024px) {
-  .services-box,
-  .products-box,
-  .about-box {
-    background-position: center;
-    background-attachment: inherit; }
-
-  .large-window {
-    background-size: cover;
-    background-attachment: inherit; } }
 @media screen and (max-width: 768px) {
   .content article {
     padding: 20px; }

@@ -179,6 +179,9 @@ block content
             h3 Contact
 
             p Request an appointment with us and we will contact you back as soon as possible. Do you have questions regarding your future appointment with us? Feel free to send us a message with your concerns or give us a call directly (972) 312-9494.
+
+            p
+                em Form is temporaily disabled while under construction.
             
             div.bt-form__wrapper
                 form.js-flabels.bt-flabels.contact-form#contact-form(
@@ -188,59 +191,60 @@ block content
                     data-parsley-validate
                     data-parsley-errors-messages-disabled
                 )
-                    div.bt-flabels__wrapper
-                        label First Name
-                        input(
-                            type="text"
-                            name="firstname"
-                            id="firstname"
-                            placeholder="First Name"
-                            required
-                        )
-                        span.bt-flabels__error-desc Required
-                    div.bt-flabels__wrapper
-                        label Last Name
-                        input(
-                            type="text"
-                            name="lastname"
-                            id="lastname"
-                            placeholder="Last Name"
-                            required
-                        )
-                        span.bt-flabels__error-desc Required
-                    div.bt-flabels__wrapper
-                        label Email
-                        input(
-                            type="email"
-                            name="email"
-                            id="email"
-                            placeholder="Email"
-                            required
-                        )
-                        span.bt-flabels__error-desc Required/Invalid Email
-                    div.bt-flabels__wrapper
-                        label Subject
-                        input(
-                            type="text"
-                            name="subject"
-                            id="subject"
-                            placeholder="Subject"
-                            required
-                        )
-                        span.bt-flabels__error-desc Required
-                    div.bt-flabels__wrapper.message
-                        label Message
-                        textarea(
-                            name="message"
-                            id="message"
-                            placeholder="When would you like to come in?"
-                            required
-                        )
-                        span.bt-flabels__error-desc Required
-                    button(
-                        type="submit"
-                        id="submit"
-                    ) Submit
+                    fieldset(disabled="disabled")
+                        div.bt-flabels__wrapper
+                            label First Name
+                            input(
+                                type="text"
+                                name="firstname"
+                                id="firstname"
+                                placeholder="First Name"
+                                required
+                            )
+                            span.bt-flabels__error-desc Required
+                        div.bt-flabels__wrapper
+                            label Last Name
+                            input(
+                                type="text"
+                                name="lastname"
+                                id="lastname"
+                                placeholder="Last Name"
+                                required
+                            )
+                            span.bt-flabels__error-desc Required
+                        div.bt-flabels__wrapper
+                            label Email
+                            input(
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Email"
+                                required
+                            )
+                            span.bt-flabels__error-desc Required/Invalid Email
+                        div.bt-flabels__wrapper
+                            label Subject
+                            input(
+                                type="text"
+                                name="subject"
+                                id="subject"
+                                placeholder="Subject"
+                                required
+                            )
+                            span.bt-flabels__error-desc Required
+                        div.bt-flabels__wrapper.message
+                            label Message
+                            textarea(
+                                name="message"
+                                id="message"
+                                placeholder="When would you like to come in?"
+                                required
+                            )
+                            span.bt-flabels__error-desc Required
+                        button(
+                            type="submit"
+                            id="submit"
+                        ) Submit
 
     footer
         .row.footer-stuff

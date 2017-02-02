@@ -9,7 +9,6 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  max-width: 1170px;
   margin: 0 auto;
 }
 
@@ -62,11 +61,6 @@ li {
   list-style: none;
 }
 
-footer {
-  max-width: 1170px;
-  margin: 0 auto;
-}
-
 .main-nav {
   position: fixed;
   top: 0;
@@ -80,6 +74,7 @@ footer {
 
   ul {
     list-style: none;
+    overflow: hidden;
 
     li {
       display: inline-block;
@@ -197,6 +192,9 @@ footer {
 
 .our-team {
   padding: 0 20px;
+  width: auto;
+  max-width: 1170px;
+  margin: 0 auto;
 
   figure {
     margin-bottom: 20px;
