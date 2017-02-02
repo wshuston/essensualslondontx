@@ -1,29 +1,21 @@
 {
-  "name": "parallax-on-the-web-devtips",
+  "name": "myapp",
   "version": "1.0.0",
   "private": true,
-  "description": "Video Series [ for free on YouTube](https://www.youtube.com/playlist?list=PLqGj3iMvMa4IyCbhul-PdeiDqmh4ooJzk) on the [DevTips](https://www.youtube.com/user/DevTipsForDesigners) Channel",
-  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DevTips/Parallax-on-the-Web-DevTips-.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DevTips/Parallax-on-the-Web-DevTips-/issues"
-  },
-  "homepage": "https://github.com/DevTips/Parallax-on-the-Web-DevTips-#readme",
   "dependencies": {
-    "body-parser": "^1.16.0",
-    "cookie-parser": "^1.4.3",
-    "express": "^4.14.0",
-    "http-proxy": "^1.16.2",
-    "nodemailer": "^2.7.2",
-    "parsleyjs": "^2.6.2",
-    "sendgrid": "^4.7.1"
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
+    "morgan": "~1.7.0",
+    "pug": "~2.0.0-beta6",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "flightplan": "^0.6.15",
+    "fly": "^2.0.1"
   }
 }
