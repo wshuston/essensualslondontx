@@ -34,6 +34,23 @@
 
 // responsive
 
+@media screen and (max-width: 1024px) {
+  .services-box,
+  .products-box,
+  .about-box {
+    background: {
+      position: center;
+      attachment: inherit;
+    }
+  }
+  .large-window {
+    background: {
+      size: cover;
+      attachment: inherit;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   .content {
     article {
@@ -59,6 +76,7 @@
     }
   }
   footer {
+    padding: 40px 20px;
     .footer-stuff {
       .footer-social {
         width: 30.6666666667%;
