@@ -110,6 +110,11 @@ li {
     attachment: fixed;
   };
   overflow: hidden;
+  @media screen and (max-width: 768px) {
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+  }
 }
 
 .top-box {
