@@ -927,7 +927,7 @@ li {
         .main-nav ul li a:hover, .main-nav ul li a:active {
           text-decoration: underline; }
 
-.top-box, .services-box, .products-box, .about-box {
+.box, .top-box, .services-box, .products-box, .about-box {
   position: relative;
   height: 768px;
   background-image: url(/images/leads/home.jpg);
@@ -1104,6 +1104,9 @@ footer {
 
 .wedding-styling {
   position: relative; }
+  .wedding-styling img {
+    display: block;
+    margin: 0 auto; }
   .wedding-styling .logo h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 100; }
@@ -1234,6 +1237,11 @@ form.contact-form textarea {
   .content article {
     padding: 20px; }
 
+  .box background, .top-box background, .services-box background, .products-box background, .about-box background {
+    size: cover;
+    position: center;
+    attachment: scroll; }
+
   .main-nav ul {
     display: -webkit-box;
     display: -moz-box;
@@ -1251,8 +1259,10 @@ form.contact-form textarea {
   .large-window {
     height: 50vh;
     width: 50vh;
-    background-size: cover;
     margin: 100px auto; }
+    .large-window background {
+      size: cover;
+      attachment: scroll; }
     .large-window .promo-text {
       font-size: 40px; }
 

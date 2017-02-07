@@ -57,6 +57,13 @@
       padding: 20px;
     }
   }
+  .box {
+    background {
+      size: cover;
+      position: center;
+      attachment: scroll;
+    }
+  }
   .main-nav {
     ul {
       @include flexbox();
@@ -69,7 +76,10 @@
   .large-window {
     height: 50vh;
     width: 50vh;
-    background-size: cover;
+    background {
+      size: cover;
+      attachment: scroll;
+    }
     margin: 100px auto;
     .promo-text {
         font-size: 40px;

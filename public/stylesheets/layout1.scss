@@ -100,7 +100,7 @@ li {
 
 // Parallax
 
-.top-box {
+.box {
   position: relative;
   height: 768px;
   background: {
@@ -112,8 +112,12 @@ li {
   overflow: hidden;
 }
 
+.top-box {
+  @extend .box;
+}
+
 .services-box {
-  @extend .top-box;
+  @extend .box;
 
   background: {
     image: url(/images/leads/services.jpg);
@@ -121,7 +125,7 @@ li {
 }
 
 .products-box {
-  @extend .top-box;
+  @extend .box;
 
   background: {
     image: url(/images/leads/products.jpg);
@@ -129,7 +133,7 @@ li {
 }
 
 .about-box {
-  @extend .top-box;
+  @extend .box;
 
   background: {
     image: url(/images/leads/about.jpg);
@@ -369,6 +373,10 @@ footer {
 
 .wedding-styling {
   position: relative;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
   .logo h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 100;
