@@ -59,9 +59,9 @@
   }
   .box {
     background {
-      size: cover;
+      size: 100% auto;
       position: center;
-      attachment: scroll;
+      attachment: inherit;
     }
   }
   .main-nav {

@@ -1238,9 +1238,9 @@ form.contact-form textarea {
     padding: 20px; }
 
   .box background, .top-box background, .services-box background, .products-box background, .about-box background {
-    size: cover;
+    size: 100% auto;
     position: center;
-    attachment: scroll; }
+    attachment: inherit; }
 
   .main-nav ul {
     display: -webkit-box;
