@@ -1,3 +1,4 @@
 *.less.cache
 *.sass.cache
 node_modules
+email-config.js
