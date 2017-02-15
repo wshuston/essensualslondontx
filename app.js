@@ -4,12 +4,26 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var nodemailer = require('nodemailer');
+var xoauth2 = require('xoauth2');
 
 var index = require('./routes/index');
 // var users = require('./routes/users');
 var weddingstyling = require('./routes/weddingstyling');
 
 var app = express();
+
+var transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    xoauth2: xoauth2.createXOAuth2Generator({
+      user: 'essensuals.appointments@gmail.com',
+      clientId: '837564773657-ca8ci4apfr1j9u9uq5v5v6j0tlq6afaf.apps.googleusercontent.com',
+      clientSecret: 'yk22OJCqos6WoLW24dYMo4bM',
+      refreshToken: '1/cEXbj-K-djW52G7cWroOuMPA_6wWsE5IMBUzTc3odjanamHI4AEApqGyplpLXsGO',
+    })
+  }
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,6 +40,33 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 // app.use('/users', users);
 app.use('/weddingstyling', weddingstyling);
+
+app.post('/process', function(req,res){
+  console.log('Form : ' + req.query.form);
+  console.log('Name : ' + req.body.firstname + ' ' + req.body.lastname);
+  console.log('Email : ' + req.body.email);
+  console.log('Subject : ' + req.body.subject);
+  console.log('Message: ' + req.body.message);
+
+  var name = ''+ req.body.firstname +' '+ req.body.lastname;
+
+  var mailOptions = {
+    from: 'Essensuals London TX <essensuals.appointments@gmail.com>',
+    to: ''+ name +' <'+ req.body.email +'>',
+    subject: req.body.subject,
+    text: 'Message: '+ req.body.message
+  }
+  console.log(mailOptions);
+  transporter.sendMail(mailOptions, function(err, res){
+    if(err) {
+      console.log('Error:');
+      console.log(err);
+    } else {
+      console.log('Email Sent');
+    }
+  });
+  res.redirect(303, '/');
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
