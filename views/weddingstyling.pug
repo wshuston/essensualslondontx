@@ -38,15 +38,15 @@ block content
 
             p We understand that your special day can be a little...hetic. Our experienced stylists want to ensure that everything is on cue, even if that means perfecting every detail in your tresses. If you have any questions, comments, or concerns about what we need from you - feel free to fill out the form below and we get you taken care of!
 
-            p 
-                em Form is temporaily disabled while under construction.
-
             div.bt-form__wrapper
                 form.js-flabels.bt-flabels.contact-form(
+                    role="form"
+                    action="/process?form=wedding-styling"
+                    method="POST"
                     data-parsley-validate
                     data-parsley-errors-messages-disabled
                 )
-                    fieldset(disabled="disabled")
+                    fieldset
                         div.bt-flabels__wrapper
                             label First Name
                             input(
@@ -96,6 +96,11 @@ block content
                                 required
                             )
                             span.bt-flabels__error-desc Required
+                        div.antispam Leave this empty: 
+                            input(
+                                type="text"
+                                name="url"
+                            )
                         button(
                             type="submit"
                             id="submit"

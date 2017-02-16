@@ -183,7 +183,7 @@ block content
             div.bt-form__wrapper
                 form.js-flabels.bt-flabels.contact-form#contact-form(
                     role="form"
-                    action="/process?form=contactus"
+                    action="/process?form=main-page"
                     method="POST"
                     data-parsley-validate
                     data-parsley-errors-messages-disabled
@@ -238,6 +238,11 @@ block content
                                 required
                             )
                             span.bt-flabels__error-desc Required
+                        div.antispam Leave this empty: 
+                            input(
+                                type="text"
+                                name="url"
+                            )
                         button(
                             type="submit"
                             id="submit"

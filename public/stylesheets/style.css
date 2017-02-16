@@ -901,6 +901,9 @@ li {
   margin-bottom: 0;
   list-style: none; }
 
+.antispam {
+  display: none; }
+
 .main-nav {
   position: fixed;
   top: 0;

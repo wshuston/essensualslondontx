@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 var xoauth2 = require('xoauth2');
-var emailConfig = require('./email-config.js');
+var emailConfig = require('../email-config.js');
 
 var index = require('./routes/index');
 // var users = require('./routes/users');
@@ -20,7 +20,7 @@ app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
+// app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -38,6 +38,7 @@ app.post('/process', function(req,res){
   console.log('Message: ' + req.body.message);
 
   var name = ''+ req.body.firstname +' '+ req.body.lastname;
+  var formname = req.body.form;
 
   // var transporter = nodemailer.createTransport({
   //   service: 'Gmail',
@@ -61,7 +62,7 @@ app.post('/process', function(req,res){
 
   var mailOptions = {
     from: ''+ name +' <'+ req.body.email +'>', 
-    to: 'whs.pro@gmail.com',
+    to: emailConfig.user,
     subject: req.body.subject,
     html: '<b>Name: </b><p>'+ name +'</p><br/><b>Message: </b><p>'+ req.body.message +'</p>'
   }
@@ -70,15 +71,19 @@ app.post('/process', function(req,res){
   var redirectHome = function(){
     res.redirect(303, '/');
   };
-  transporter.sendMail(mailOptions, function(err, res){
-    if(err) {
-      console.log('Error:');
-      console.log(err);
-    } else {
-      console.log('Email Sent');
-      redirectHome();
-    }
-  });
+  if(req.body.url === ''){
+    transporter.sendMail(mailOptions, function(err, res){
+      if(err) {
+        console.log('Error:');
+        console.log(err);
+      } else {
+        console.log('Email Sent');
+        redirectHome();
+      }
+    });
+  } else {
+    redirectHome();
+  }
 });
 
 // catch 404 and forward to error handler
