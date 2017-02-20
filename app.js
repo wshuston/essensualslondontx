@@ -71,7 +71,7 @@ app.post('/process', function(req,res){
   var redirectHome = function(){
     res.redirect(303, '/');
   };
-  if(req.body.url === ''){
+  if(req.body.url === '' && req.body.phone === ''){
     transporter.sendMail(mailOptions, function(err, res){
       if(err) {
         console.log('Error:');

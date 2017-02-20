@@ -96,10 +96,17 @@ block content
                                 required
                             )
                             span.bt-flabels__error-desc Required
-                        div.antispam Leave this empty: 
+                        .antispam 
+                            label(for="url") Leave this empty: 
                             input(
                                 type="text"
                                 name="url"
+                            )
+                        .antispam2
+                            label(for="phone") Leave this empty:
+                            input(
+                                type="tel"
+                                name="phone"
                             )
                         button(
                             type="submit"
