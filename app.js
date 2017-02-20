@@ -9,7 +9,7 @@ var xoauth2 = require('xoauth2');
 var emailConfig = require('../email-config.js');
 
 var index = require('./routes/index');
-// var users = require('./routes/users');
+var ourTeam = require('./routes/ourteam');
 var weddingstyling = require('./routes/weddingstyling');
 
 var app = express();
@@ -27,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-// app.use('/users', users);
+// app.use('/our-team', ourTeam);
 app.use('/weddingstyling', weddingstyling);
 
 app.post('/process', function(req,res){
