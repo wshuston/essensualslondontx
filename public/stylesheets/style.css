@@ -901,6 +901,13 @@ li {
   margin-bottom: 0;
   list-style: none; }
 
+.antispam {
+  display: none; }
+
+.antispam2 {
+  position: absolute;
+  left: -999em; }
+
 .main-nav {
   position: fixed;
   top: 0;

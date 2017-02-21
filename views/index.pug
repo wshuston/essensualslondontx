@@ -179,14 +179,11 @@ block content
             h3 Contact
 
             p Request an appointment with us and we will contact you back as soon as possible. Do you have questions regarding your future appointment with us? Feel free to send us a message with your concerns or give us a call directly (972) 312-9494.
-
-            p
-                em Form is temporaily disabled while under construction.
             
             div.bt-form__wrapper
                 form.js-flabels.bt-flabels.contact-form#contact-form(
                     role="form"
-                    action="/"
+                    action="/process?form=main-page"
                     method="POST"
                     data-parsley-validate
                     data-parsley-errors-messages-disabled
@@ -241,6 +238,17 @@ block content
                                 required
                             )
                             span.bt-flabels__error-desc Required
+                        div.antispam Leave this empty: 
+                            input(
+                                type="text"
+                                name="url"
+                            )
+                        .antispam2
+                            label(for="phone") Leave this empty:
+                            input(
+                                type="tel"
+                                name="phone"
+                            )
                         button(
                             type="submit"
                             id="submit"
