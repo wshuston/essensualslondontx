@@ -9,7 +9,7 @@ var xoauth2 = require('xoauth2');
 var emailConfig = require('../email-config.js');
 
 var index = require('./routes/index');
-var ourTeam = require('./routes/ourteam');
+// var ourteam = require('./routes/ourteam');
 var weddingstyling = require('./routes/weddingstyling');
 
 var app = express();
@@ -27,7 +27,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-// app.use('/our-team', ourTeam);
+// app.use('/ourteam', ourteam);
 app.use('/weddingstyling', weddingstyling);
 
 app.post('/process', function(req,res){
@@ -39,18 +39,6 @@ app.post('/process', function(req,res){
 
   var name = ''+ req.body.firstname +' '+ req.body.lastname;
   var formname = req.body.form;
-
-  // var transporter = nodemailer.createTransport({
-  //   service: 'Gmail',
-  //   auth: {
-  //     xoauth2: xoauth2.createXOAuth2Generator({
-  //       user: 'essensuals.appointments@gmail.com',
-  //       clientId: '837564773657-ca8ci4apfr1j9u9uq5v5v6j0tlq6afaf.apps.googleusercontent.com',
-  //       clientSecret: 'yk22OJCqos6WoLW24dYMo4bM',
-  //       refreshToken: '1/cEXbj-K-djW52G7cWroOuMPA_6wWsE5IMBUzTc3odjanamHI4AEApqGyplpLXsGO',
-  //     })
-  //   }
-  // });
 
   var transporter = nodemailer.createTransport({
     service: 'Gmail',
