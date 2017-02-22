@@ -1226,6 +1226,15 @@ form.contact-form textarea {
 .bt-flabel__float input[type] {
   padding-top: 9px; }
 
+.our-team-page {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-top: 60px; }
+  .our-team-page article {
+    padding: 60px 20px; }
+  .our-team-page .team-picture {
+    margin: 30px 0; }
+
 .wrapper {
   display: -webkit-box;
   display: -moz-box;
