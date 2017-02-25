@@ -68,6 +68,16 @@ block content
                             )
                             span.bt-flabels__error-desc Required
                         div.bt-flabels__wrapper
+                            label Phone Number
+                            input(
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                placeholder="Phone Number"
+                                required
+                            )
+                            span.bt-flabels__error-desc Required
+                        div.bt-flabels__wrapper
                             label Email
                             input(
                                 type="email"
@@ -87,26 +97,44 @@ block content
                                 required
                             )
                             span.bt-flabels__error-desc Required
+                        div.bt-flabels__wrapper.clientselect
+                            select(
+                                form="contact-form"
+                                name="clienttype"
+                                id="clienttype"
+                            )
+                                option(value="" disabled selected) I am a...
+                                option(value="no") New Client
+                                option(value="yes") Existing Client
+                            span.bt-flabels__error-desc Required
+                        div.bt-flabels__wrapper.dateselect
+                            label Appointment Date
+                            input(
+                                type="date"
+                                name="date"
+                                id="date"
+                                placeholder="Date you'd like to come in"
+                            )
+                            span.bt-flabels__error-desc Required
                         div.bt-flabels__wrapper.message
                             label Message
                             textarea(
                                 name="message"
                                 id="message"
-                                placeholder="When would you like to come in?"
+                                placeholder="What time would you like to come in? And, what can we do for you?"
                                 required
                             )
                             span.bt-flabels__error-desc Required
-                        .antispam 
-                            label(for="url") Leave this empty: 
+                        div.antispam Leave this empty: 
                             input(
                                 type="text"
                                 name="url"
                             )
                         .antispam2
-                            label(for="date") Leave this empty:
+                            label(for="telephone") Leave this empty:
                             input(
-                                type="date"
-                                name="date"
+                                type="tel"
+                                name="telephone"
                             )
                         button(
                             type="submit"
