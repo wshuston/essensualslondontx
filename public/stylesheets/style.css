@@ -1226,6 +1226,31 @@ form.contact-form textarea {
 .bt-flabel__float input[type] {
   padding-top: 9px; }
 
+.bt-form__wrapper #clienttype {
+  border: none;
+  width: 100%; }
+.bt-form__wrapper .dateselect, .bt-form__wrapper .clientselect {
+  width: 50%;
+  height: 60px;
+  float: left; }
+  .bt-form__wrapper .dateselect input, .bt-form__wrapper .clientselect input,
+  .bt-form__wrapper .dateselect select,
+  .bt-form__wrapper .clientselect select {
+    margin-bottom: 0; }
+  .bt-form__wrapper .dateselect label, .bt-form__wrapper .clientselect label {
+    opacity: 1;
+    color: #666; }
+  .bt-form__wrapper .dateselect input, .bt-form__wrapper .clientselect input {
+    padding-left: 10px; }
+    .bt-form__wrapper .dateselect input:focus, .bt-form__wrapper .clientselect input:focus {
+      outline: none;
+      background-color: #fff; }
+  .bt-form__wrapper .dateselect select, .bt-form__wrapper .clientselect select {
+    height: 50px; }
+.bt-form__wrapper .message {
+  border-radius: 0;
+  clear: both; }
+
 .our-team-page {
   max-width: 1170px;
   margin: 0 auto;

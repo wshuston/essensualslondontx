@@ -535,6 +535,43 @@ form.contact-form {
   padding-top: 9px;
 }
 
+.bt-form__wrapper {
+  #clienttype {
+    border: none;
+    width: 100%;
+  }
+  .dateselect {
+    width: 50%;
+    height: 60px;
+    float: left;
+    input,
+    select {
+      margin-bottom: 0;
+    }
+    label {
+      opacity: 1;
+      color: #666;
+    }
+    input {
+      padding-left: 10px;
+      &:focus {
+        outline: none;
+        background-color: #fff;
+      }
+    }
+    select {
+      height: 50px;
+    }
+  }
+  .clientselect {
+    @extend .dateselect;
+  }
+  .message {
+    border-radius: 0;
+    clear: both;
+  }
+}
+
 .our-team-page {
   max-width: 1170px;
   margin: 0 auto;

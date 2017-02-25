@@ -22,7 +22,7 @@ app.set('view engine', 'pug');
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 // app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -36,9 +36,14 @@ app.post('/process', function(req,res){
   console.log('Email : ' + req.body.email);
   console.log('Subject : ' + req.body.subject);
   console.log('Message: ' + req.body.message);
+  console.log('Client Type: '+ req.body.clienttype);
+  console.log('Appointment Date: '+ req.body.date);
 
   var name = ''+ req.body.firstname +' '+ req.body.lastname;
   var formname = req.body.form;
+  var clientType = req.body.clienttype;
+
+  console.log('var clientType: ' + clientType);
 
   var transporter = nodemailer.createTransport({
     service: 'Gmail',
@@ -52,14 +57,14 @@ app.post('/process', function(req,res){
     from: ''+ name +' <'+ req.body.email +'>', 
     to: emailConfig.user,
     subject: req.body.subject,
-    html: '<b>Name: </b><p>'+ name +'</p><br/><b>Message: </b><p>'+ req.body.message +'</p>'
+    html: '<b>Name: </b><p>'+ name +'</p><br/><b>Email: </b><p>'+ req.body.email +'</p><br/><b>Phone Number: </b><p>'+ req.body.phone +'</p><br/><b>Appointment Date: </b><p>'+ req.body.date +'</p><br/><b>Message: </b><p>'+ req.body.message +'</p><br/><b>Exisitng Client?: </b><p>'+ clientType +'</p>'
   }
   console.log(mailOptions);
 
   var redirectHome = function(){
     res.redirect(303, '/');
   };
-  if(req.body.url === '' && req.body.phone === ''){
+  if(req.body.url === '' && req.body.telephone === ''){
     transporter.sendMail(mailOptions, function(err, res){
       if(err) {
         console.log('Error:');
